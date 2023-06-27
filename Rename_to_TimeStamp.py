@@ -1,3 +1,20 @@
+# File renamer to prefix existing file name with date/time stamp
+#   Format is yyyymmdd_xMHHMM_ExistingFilename.ExistingExt
+#   I.E. 20230626_PM0842_MyFile.png
+#
+# Format chosen to ensure sort by name is also by date. And,
+#   previous file name distinguishes files within each minute. 
+
+# Much of this is pieced together from snippits of code written 
+#   by chatGPT. 
+
+# Requires:
+#   pip install tkinter
+#   pip install exifread
+
+# WARNING: Be very careful using this. It operates on every file 
+#   within the folder(s) selected. And has undergone minimal testing 
+#   at this point.
 import os
 import tkinter as tk
 from datetime import datetime
